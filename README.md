@@ -1,7 +1,7 @@
 # LeetCode Solutions
 Here you can find efficient solutions to LeetCode problems. C++ is a main programming language used to solve the problems.<br>
-At each solution file could be found:
 <ul>
+At each solution file could be found:
   <li>time complexity analysis</li>
   <li>space comlexity analysis</li>
   <li>link to a leetCode solution's submission</li>
