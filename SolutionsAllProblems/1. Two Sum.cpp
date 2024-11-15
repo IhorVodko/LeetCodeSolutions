@@ -1,5 +1,6 @@
 // problem :  https://leetcode.com/problems/two-sum/description/
 // submission : https://leetcode.com/problems/two-sum/submissions/1453436742
+// solution post: https://leetcode.com/problems/two-sum/solutions/6047746/c-modern-readable-code-beats-100-time-raking
 
 // #include <vector>
 // #include <unordered_map>
