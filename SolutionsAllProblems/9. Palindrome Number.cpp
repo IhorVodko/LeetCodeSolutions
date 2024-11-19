@@ -4,7 +4,7 @@
 
 class Solution {
 public:
-    // let 'n' be a number of digits in an input number
+    // let 'n' be an input number
     // time complexity O(log10(n))
     // space complexity O(1)
     // runtime 0 ms, beats 100 %
