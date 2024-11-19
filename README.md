@@ -1,5 +1,5 @@
 # LeetCode Solutions
-Here you can find efficient solutions to [LeetCode problems](https://leetcode.com/problemset/). C++ is a main programming language used to solve the problems.
+Here you can find efficient solutions to [LeetCode problems](https://leetcode.com/problemset/) using modern readable and self-explained code. C++ is a main programming language used to solve the problems. Most of the solutions beats 100% mark, based on runtime performance.   
 <p></p>
 At each solution file could be found:
 <ul>
