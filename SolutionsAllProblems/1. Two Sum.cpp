@@ -10,8 +10,8 @@ public:
     // let n = nums.size(), an input size
     // time complexity O(n)
     // space complexity O(n)
-    // Runtime 0 ms, beats 100 %
-    // Memory 14.38 MB, beats 36.48 %
+    // runtime 0 ms, beats 100 %
+    // memory 14.38 mb, beats 36.48 %
     std::vector<int> twoSum(
         std::vector<int> & nums,
         int target
