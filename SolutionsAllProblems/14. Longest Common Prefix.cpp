@@ -11,8 +11,8 @@ public:
     // let 'S' be a sum of all letters from words in the input array
     // time complexity O(S)
     // space complexity O(1)
-    // Runtime 0 ms, beats 100 %
-    // Memory 11.15 mb, beats 74.91 %
+    // runtime 0 ms, beats 100 %
+    // memory 11.15 mb, beats 74.91 %
     std::string longestCommonPrefix(std::vector<std::string> & strs){
         if(strs.empty()){
             return "";
