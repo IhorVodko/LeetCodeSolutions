@@ -12,7 +12,6 @@ public:
     // time complexity O(n)
     // space complexity O(1)
     // runtime 0 ms, beats 100 %
-    // memory 13.21 mb, beats 19.58 %
     int findNumbers(std::vector<int> const & nums) const {
         return std::count_if(nums.cbegin(), nums.cend(), [&] (auto num) {
             return (10 <= num && num < 99) || (1000 <= num && num <= 9999) ||
