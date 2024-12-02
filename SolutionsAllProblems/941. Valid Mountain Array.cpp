@@ -11,7 +11,6 @@ public:
     // time complexity O(n)
     // space complexity O(1)
     // runtime 14 ms, beats 90.96 %
-    // memory 26.05 mb, beats 41.40 %
     bool validMountainArray(std::vector<int> const & arr) const {
         constexpr auto requiredMinSize{3};
         if(arr.size() < requiredMinSize) {
