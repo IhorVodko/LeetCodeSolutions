@@ -10,7 +10,6 @@ public:
     // time complexity O(n)
     // space complexity O(1)
     // runtime 0 ms, beats 100.00 %
-    // memory  22.64 mb, beats 5.93 %
     // for educational purposes no stl algos used
     int removeDuplicates(std::vector<int> & nums){
         if(nums.size() == 1){
