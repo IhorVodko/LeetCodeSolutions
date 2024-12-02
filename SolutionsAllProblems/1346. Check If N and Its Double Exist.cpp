@@ -12,7 +12,6 @@ public:
     // time complexity O(n)
     // space complexity O(n)
     // runtime 0 ms, beats 100.00 %
-    // memory 14.32 mb, beats 12.36 %
     bool checkIfExist(std::vector<int> const & arr) const {
         // for educational purposes no stl algos are used
         enum class Times {X1, X2};
