@@ -11,7 +11,6 @@ public:
     // time complexity O(n)
     // space complexity O(1)
     // runtime 0 ms, beats 100 %
-    // memory 12.25 mb, beats 41.58 %
     int thirdMax(std::vector<int> const & nums) const {
         auto threeLargestNums{std::set<int>{{nums.front()}}};
         auto num{std::cbegin(nums)};
