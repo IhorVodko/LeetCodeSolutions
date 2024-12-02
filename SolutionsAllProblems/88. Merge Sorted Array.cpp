@@ -10,7 +10,6 @@ public:
     // time complexity O(n + m)
     // space complexity O(1)
     // runtime 0 ms, beats 100.00 %
-    // memory 12.42 mb, beats 23.49 %
    void merge(
         std::vector<int> & nums1,
         int const notZeros1,
