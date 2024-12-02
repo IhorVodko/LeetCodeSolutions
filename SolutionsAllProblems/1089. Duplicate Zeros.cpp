@@ -12,7 +12,6 @@ public:
     // time complexity O(n)
     // space complexity O(1)
     // runtime 0 ms, beats 100.00 %
-    // memory 13.79 mb, beats 6.22 %
     void duplicateZeros(std::vector<int> & arr) {
         if(arr.size() == 1){
             return;
