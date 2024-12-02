@@ -11,7 +11,6 @@ public:
     // time complexity O(n)
     // space complexity O(1)
     // runtime 0 ms, beats 100.00 %
-    // memory 11.74 mb, beats  37.48 %
     // for educational purposes no stl algos used
     int removeElement(
         std::vector<int> & nums,
