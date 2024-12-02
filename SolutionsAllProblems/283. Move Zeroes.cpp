@@ -10,7 +10,6 @@ public:
     // time complexity O(n)
     // space complexity O(1)
     // runtime 0 ms, beats 100.00 %
-    // memory 23.94 mb, beats 5.17 %
     // for educational purposes no stl algos are used
     void moveZeroes(std::vector<int> & nums) {
         auto reader{nums.begin()};
