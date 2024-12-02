@@ -22,7 +22,6 @@ public:
     // time complexity O(n)
     // space complexity O(n)
     // Runtime 0 ms, beats 100 %
-    // Memory 10.02 mb, beats 79.98 %
     std::vector<int> postorderTraversal(TreeNode const * root) const {
         if(!root){
             return {};
