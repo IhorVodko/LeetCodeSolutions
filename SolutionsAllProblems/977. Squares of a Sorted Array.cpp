@@ -12,7 +12,6 @@ public:
     // time complexity O(n)
     // space complexity O(1)
     // runtime 0 ms, beats 100 %
-    // memory 30.2 mb, beats 17.94 %
     std::vector<int> sortedSquares(std::vector<int> const & nums) const {
         if(nums.size() == 1){
             return {nums.front() * nums.front()};
