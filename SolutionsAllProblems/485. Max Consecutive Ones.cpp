@@ -11,7 +11,6 @@ public:
     // time complexity O(n)
     // space complexity O(1)
     // runtime 0 ms, beats 100 %
-    // memory 49.17 mb, beats 27.20 %
     int findMaxConsecutiveOnes(std::vector<int> const & nums) const {
         int maxOnes{0};
         int currentOnes{0};
