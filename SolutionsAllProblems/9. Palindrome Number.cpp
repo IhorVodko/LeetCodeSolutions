@@ -8,7 +8,6 @@ public:
     // time complexity O(log10(n))
     // space complexity O(1)
     // runtime 0 ms, beats 100 %
-    // memory 8.44 mb, beats 76.59 % 
     bool isPalindrome(int num) {
         if(num < 0){
             return false;
