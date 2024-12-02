@@ -11,7 +11,6 @@ public:
     // time complexity O(n)
     // space complexity O(1)
     // runtime 0 ms, beats 100.00 %
-    // memory 72.7 mb, beats 16.44 %
     std::vector<int> replaceElements(
         std::vector<int> & arr
     ) {
