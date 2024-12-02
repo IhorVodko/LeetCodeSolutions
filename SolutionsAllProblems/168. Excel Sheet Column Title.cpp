@@ -13,7 +13,6 @@ public:
         // time complexity O(log(n))
         // space complexity O(1)
         // runtime 0 ms, beats 100.00 %
-        // memory 7.12 mb, beats 96.88 %
         auto title{std::string{}};
         auto constexpr asciiOffset{int(65)};
         auto constexpr alphabetSize{int(26)};
