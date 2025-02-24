@@ -7,7 +7,7 @@ At each solution file could be found:
   <li>space comlexity analysis</li>
   <li>runtime performance copmared to other solutions using the same language</li>
   <li>link to a leetCode solution's submission</li>
-  <li>link to a leetCode sulution's post</li>
+  <li>link to a leetCode solution's post</li>
   <li>link to a leetCode problem</li>
 </ul>
 Memory performance compared to other solutions is not indicated because this metric is not accurately measured by LeetCode, so refer to above-mentioned space comlexity analysis instead.<br>
