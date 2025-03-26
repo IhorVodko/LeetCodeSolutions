@@ -1,6 +1,7 @@
 // problem : https://leetcode.com/problems/remove-element/description/
 // submission : https://leetcode.com/problems/remove-element/submissions/1464416758
-// solution post: 
+// solution post: https://leetcode.com/problems/remove-element/solutions/6582378/
+//     c-modern-readable-code-beats-100-runtime-q9c3
 
 // #include <vector>
 
