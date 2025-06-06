@@ -13,7 +13,7 @@ public:
 // let 'n' be a length of the given string
 // 'c' - size of the given character set
 // time complexity O(n + c)
-// space complexity O(n)
+// space complexity O(n + c)
 // runtime 83 ms, beats 28.22 %
     std::string robotWithString(std::string const & str_) const;
 private:
