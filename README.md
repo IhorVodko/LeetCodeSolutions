@@ -1,5 +1,5 @@
 # LeetCode Solutions
-Here you can find efficient solutions to [LeetCode problems](https://leetcode.com/problemset/) using modern readable and self-explained code. C++ is a main programming language used to solve the problems. Sometimes STL algorithms and/or data structures are not used for easy level problems for educational purposes. PostgreSQL dialect is used to solve database-related problems. Bash is used to solve shell-related problems. All solutions have optimal runtime complexity and most of them beats 100% mark, based on runtime performance.   
+Here you can find efficient solutions to [LeetCode problems](https://leetcode.com/u/CyberArtist/) using modern readable and self-explained code. C++ is a main programming language used to solve the problems. Sometimes STL algorithms and/or data structures are not used for easy level problems for educational purposes. PostgreSQL dialect is used to solve database-related problems. Bash is used to solve shell-related problems. All solutions have optimal runtime complexity and most of them beats 100% mark, based on runtime performance.   
 <p></p>
 At each solution file could be found:
 <ul>
