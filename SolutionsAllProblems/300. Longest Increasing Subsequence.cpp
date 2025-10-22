@@ -1,6 +1,7 @@
 // problem : https://leetcode.com/problems/longest-increasing-subsequence/description
 // submission : https://leetcode.com/problems/longest-increasing-subsequence/submissions/1808478372
-// solution post : 
+// solution post : https://leetcode.com/problems/longest-increasing-subsequence/solutions/7292872/
+//     c-modern-readable-code-beats-100-runtime-om78
 
 // import std;
 
