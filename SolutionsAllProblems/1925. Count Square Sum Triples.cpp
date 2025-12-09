@@ -5,6 +5,11 @@
 
 // import std;
 
+// let 'n' be the given upper limit number
+// time complexity O(n^2)
+// space complexity O(1)
+// runtime 0 ms, beats 100.00 %
+
 inline static int const fastIOInit{
         [] {
         struct Print {
@@ -41,9 +46,12 @@ auto Solution::countTriples(int const numUpperLimit_) const -> int {
             auto const c{static_cast<int>(
                 std::sqrt(a * a + b * b + kSafeRoundingOffset)
             )};
-            if(c <= numUpperLimit_ && c * c == a * a + b * b) [[unlikely]] {
+            if(c > numUpperLimit_) [[unlikely]] {
+                break;
+            }
+            if(c * c == a * a + b * b) [[unlikely]] {
                 ++cnt;
-            } 
+            }
         }
     }
     return cnt;
