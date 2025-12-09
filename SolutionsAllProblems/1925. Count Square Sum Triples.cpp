@@ -1,5 +1,5 @@
 // problem : https://leetcode.com/problems/count-square-sum-triples/description/ 
-// submission : https://leetcode.com/problems/count-square-sum-triples/submissions/1851243715
+// submission : https://leetcode.com/problems/count-square-sum-triples/submissions/1851253645
 // solution post : https://leetcode.com/problems/count-square-sum-triples/solutions/7402902/
 //    c-modern-readable-code-beats-100-runtime-q6tx
 
