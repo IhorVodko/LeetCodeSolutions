@@ -1,15 +1,26 @@
-# LeetCode Solutions
-Here you can find efficient solutions to [LeetCode problems](https://leetcode.com/u/CyberArtist/) using modern readable and self-explained code. C++ is a main programming language used to solve the problems. Sometimes STL algorithms and/or data structures are not used for easy level problems for educational purposes. PostgreSQL dialect is used to solve database-related problems. Bash is used to solve shell-related problems. All solutions have optimal runtime complexity and most of them beats 100% mark, based on runtime performance.   
-<p></p>
-At each solution file could be found:
+<h1>LeetCode Solutions</h1>
+
+<p>Welcome! This repository contains <strong>efficient solutions to <a href="https://leetcode.com/u/CyberArtist/">LeetCode problems</a></strong>, written in modern, readable, and self-explanatory code.</p>
+
+<p>C++ is the primary programming language used. For educational purposes, STL algorithms and/or data structures may sometimes be omitted in easy-level problems to illustrate concepts clearly.</p>
+
+<p>Database-related problems are solved using <strong>PostgreSQL</strong>, and shell-related problems are solved using <strong>Bash</strong>. All solutions aim for <strong>optimal runtime complexity</strong>, and most of them achieve <strong>top runtime performance</strong>, often beating 100% of submissions.</p>
+
+<hr>
+
+<h2>What each solution file includes</h2>
+
 <ul>
-  <li>time complexity analysis</li>
-  <li>space comlexity analysis</li>
-  <li>runtime performance copmared to other solutions using the same language</li>
-  <li>link to a leetCode solution's submission</li>
-  <li>link to a leetCode solution's post</li>
-  <li>link to a leetCode problem</li>
+  <li><strong>Time complexity analysis</strong></li>
+  <li><strong>Space complexity analysis</strong></li>
+  <li><strong>Runtime performance comparison</strong> with other solutions in the same language</li>
+  <li><strong>Link to the LeetCode submission</strong></li>
+  <li><strong>Link to the solution post</strong></li>
+  <li><strong>Link to the original LeetCode problem</strong></li>
 </ul>
-Memory performance compared to other solutions is not indicated because this metric is not accurately measured by LeetCode, so refer to above-mentioned space comlexity analysis instead.<br>
-<br>
-<b>If this repository has been helpful please press a star :)</b>
+
+<p><em>⚠️ Memory performance comparisons are not included, as LeetCode does not provide accurate measurements for this metric. Please refer to the space complexity analysis instead.</em></p>
+
+<hr>
+
+<p><strong>⭐ If you find this repository helpful, please consider giving it a star!</strong></p>
