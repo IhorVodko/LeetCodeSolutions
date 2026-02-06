@@ -16,7 +16,7 @@ inline static int const fastIOInit{
 
 // let 'n' be the number of elements
 // time complexity O(n * log(n))
-// space complexity O(n * log(n))
+// space complexity O(log(n))
 // runtime 0 ms, beats 100.00 %
 class Solution {
 public:
