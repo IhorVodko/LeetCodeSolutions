@@ -89,7 +89,7 @@ namespace {
 // let 'n' be the number of ones
 // 'm' - the number of zeroes
 // 'k' - the limit size of subarray
-// time complexity O(n)
+// time complexity O(n * m / k)
 // space complexity O(1)
 // runtime 0 ms, beats 100.00 %
 // Main solution class for the problem.
