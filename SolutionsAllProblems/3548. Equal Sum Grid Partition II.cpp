@@ -18,7 +18,6 @@ auto const fastIOInit{
 
 } // namespace
 
-
 // let 'n' by 'm' be the matrix size
 // 'k' - the maximum possible value in the matrix
 // time complexity O(n * m)
