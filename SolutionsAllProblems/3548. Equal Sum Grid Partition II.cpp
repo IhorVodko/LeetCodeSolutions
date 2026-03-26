@@ -18,25 +18,12 @@ auto const fastIOInit{
 
 } // namespace
 
+
 // let 'n' by 'm' be the matrix size
-// 'k' - the maximum possible value in matrix
+// 'k' - the maximum possible value in the matrix
 // time complexity O(n * m)
 // space complexity O(k)
 // runtime 0 ms, beats 100.00 %
-namespace {
-
-// Compile-time initializer to configure fast I/O before main() runs
-auto const fastIOInit{
-    [] -> int {
-        std::atexit([] { std::ofstream{"display_runtime.txt"} << 0 << std::endl; } );
-        std::ios_base::sync_with_stdio(false);
-        std::cin.tie(nullptr);
-        return 0;
-    } ()
-};
-
-} // namespace
-
 class Solution final{
 public:
     using mxT = std::vector<std::vector<int>>;
