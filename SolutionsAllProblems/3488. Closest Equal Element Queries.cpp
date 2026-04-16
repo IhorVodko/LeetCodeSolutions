@@ -1,9 +1,9 @@
 // problem : https://leetcode.com/problems/closest-equal-element-queries/description
-// submission : https://leetcode.com/problems/closest-equal-element-queries/submissions/1980388863
+// submission : https://leetcode.com/problems/closest-equal-element-queries/submissions/1980399367
 // solution post : https://leetcode.com/problems/closest-equal-element-queries/solutions/7947686/c-modern-readable-code-beats-100-runtime-4gf9
 
 // Approach : Simulated Circular Array with Hash Map
-// Runtime : 0 ms, beats 100.00 %
+// Runtime : 87 ms, beats 100.00 %
 
 // Complexity
 // let 'n' be the length of the array of numbers
@@ -49,7 +49,9 @@ auto Solution::solveQueries(
     numToLastVirtIdx.reserve(numsSz);
 
     // Iterate twice over the array to simulate a circular lookup for closest equal
-    // elements
+    // elements. Calculates direct (non-circular) distance during the first array pass
+    // (currVirtIdx < numsSz). Calculates circular distance during the second array pass
+    // (currVirtIdx >= numsSz)
     for(auto const currVirtIdx: vs::iota(0, numsSz * 2)) {
         auto const currRealIdx{currVirtIdx % numsSz};
         auto const num{nums_[currRealIdx]};
