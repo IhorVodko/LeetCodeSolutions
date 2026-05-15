@@ -1,34 +1,42 @@
-// problem : https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/
-// submission : https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/submissions/1627177872
+// problem : https://leetcode.com/problems/find-minimum-in-rotated-sorted-array
+// submission : https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/submissions/2003944412
 // solution post : https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/solutions/6720918/
-//    c-modern-readable-code-beats-100-runtime-4hrz
+//        c-modern-readable-code-beats-100-runtime-4hrz
 
-// #include <vector>
+// Approach : Declarative Binary Search
+// Runtime : 0 ms, beats 100.00 %
 
-class Solution {
-public:
-// let 'n' be a length of the given array
-// time complexity O(log2(n))
-// space complexity O(1)
-// runtime 0 ms, beats 100.00 %
-    int findMin(std::vector<int> const & nums_) const;
+// Complexity
+// let 'n' be the count of numbers
+// complexity :  O(log(n))
+// complexity : O(1)
+
+// import std;
+
+namespace {
+
+// Initializer to configure fast I/O before main() runs
+auto const fastIOInit{
+    [] -> int {
+        std::ios_base::sync_with_stdio(false);
+        std::cin.tie(nullptr);
+        return 0;
+    } ()
 };
 
-int Solution::findMin(std::vector<int> const & nums_) const {
-    auto const begin{nums_.begin()};
-    auto const end{nums_.end()};
-    auto mid{begin + ((end - 1) - begin) / 2};
-    for(auto left{begin}, right{end - 1}; left < right;) {
-        if(*left <= *mid) {
-            if(*left < *right) {
-                right = mid - 1;
-            } else {
-                left = mid + 1;    
-            }
-        } else {
-            right = mid;
-        }
-        mid = left + (right - left) / 2;
-    }
-    return *mid;
+} // namespace
+
+class Solution final {
+public:
+    [[nodiscard]]
+    auto findMin(std::vector<int> const & nums_) const -> int;
+};
+
+auto Solution::findMin(std::vector<int> const & nums_) const -> int {
+        // Binary searches the boundary between the left and right sorted portions of the
+        // rotated array
+        return *std::ranges::partition_point(
+            nums_,
+            std::bind_front(std::less{}, nums_.back())
+        );
 }
