@@ -1,46 +1,88 @@
-// problem : https://leetcode.com/problems/search-in-rotated-sorted-array/description/
-// submission : https://leetcode.com/problems/search-in-rotated-sorted-array/submissions/1622010726
-// solution post : https://leetcode.com/problems/search-in-rotated-sorted-array/solutions/6702353/
-//     c-modern-readable-code-beats-100-runtime-5d6y
+// problem : https://leetcode.com/problems/search-in-rotated-sorted-array/description
+// submission : https://leetcode.com/problems/search-in-rotated-sorted-array/submissions/2010088699
+// solution post : https://leetcode.com/problems/search-in-rotated-sorted-array/solutions/8286826/
+//        c-modern-readable-code-beats-100-runtime-dxxi
 
-// #include <vector>
+// Approach : One-Pass Binary Search
+// Runtime : 0 ms, beats 100.00 %
 
-class Solution {
+// Complexity
+// let 'n' be the count of numbers
+// complexity :  O(log(n))
+// complexity : O(1)
+
+// import std;
+
+class Solution final {
 public:
-    int search(
+    [[nodiscard]]
+    static auto search(
         std::vector<int> const & nums_,
         int const target_
-    ) const;
+    ) -> int;
+
+private:
+    // Sentinel return value for absent target
+    static auto constexpr kNotFound{-1};
 };
 
-// let 'n' be a length of the given array
-// time complexity O(log(n))
-// space complexity O(1)
-// runtime 0 ms, beats 100.00 %
-int Solution::search(
+auto Solution::search(
     std::vector<int> const & nums_,
     int const target_
-) const {
-    auto const begin{nums_.begin()};
-    auto const end{nums_.end()};
-    for(auto left{begin}, right{end - 1}, mid{begin + (end - 1 - begin) / 2};
-        left <= right; mid = left + (right - left) / 2
+) -> int {
+    auto const begin{nums_.cbegin()};
+    auto const end{nums_.cend()};
+
+    // Modified binary search over the rotated space
+    for(
+        auto    left{begin},
+                right{end - 1},
+                mid{begin + (end - begin - 1) / 2};
+        left <= right;
+        mid = left + (right - left) / 2
     ) {
+        // Target match located
         if(*mid == target_) {
             return mid - begin;
+        // Left segment is continuously sorted
         } else if(*mid >= *left) {
-            if(*left <= target_ && target_ < *mid) {
+            // Target is bounded within the sorted left segment
+            if(
+                *left <= target_ &&
+                target_ < *mid
+            ) {
                 right = mid - 1;
+            // Target must reside in the rotated right segment
             } else {
                 left = mid + 1;
             }
+        // Right segment is continuously sorted
         } else {
-            if(*mid < target_ && target_ <= *right) {
+            // Target is bounded within the sorted right segment
+            if(
+                *mid < target_ &&
+                target_ <= *right
+            ) {
                 left = mid + 1;
+            // Target must reside in the rotated left segment
             } else {
                 right = mid - 1;
             } 
         }
     }
-    return -1;
+
+    return kNotFound;
 }
+
+namespace {
+
+// Initializer to configure fast I/O before main() runs
+auto const fastIOInit{
+    [] -> int {
+        std::ios_base::sync_with_stdio(false);
+        std::cin.tie(nullptr);
+        return 0;
+    } ()
+};
+
+} // namespace
