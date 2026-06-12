@@ -4,7 +4,7 @@
 //    c-modern-readable-code-beats-100-runtime-4ddk
 
 // Approach : DFS-Free Heavy-Light Decomposition with XOR Leaf Peeling & Combinatorics
-// Runtime : 0 ms, beats 100.00 %
+// Runtime :  47 ms, beats 100.00 %
 
 // Complexity
 // let 'n' be the number of edges
