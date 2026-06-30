@@ -1,27 +1,64 @@
-// problem : https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/description/
-// submission : https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/submissions/
-//     1570666247 
-// solution post : https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/
-//     solutions/6525675/c-modern-readable-code-optimal-time-comp-hfv7
+// problem : https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/description
+// submission : https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/submissions/2051220693
+// solution post : https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/solutions/8367845/
+//    modern-readable-code-optimal-time-comple-ts2b
 
-// #include <algorithm>
-// #include <string>
-// #include <vector>
+// Approach : Track Last Seen Indices (Optimized Sliding Window)
+// Runtime : 0 ms, beats 100.00 %
 
-// let 'n' be a length of the given string
-// time complexity O(n)
-// space complexity O(1)
-// runtime 6 ms, beats 73.19 %
-class Solution {
+// Complexity
+// let 'n' be the string length
+// Time :  O(n)
+// Space : O(1)
+
+// import std;
+
+class Solution final {
 public:
-    int numberOfSubstrings(std::string const & str_) const {
-        auto validSubstrsCount{0}; 
-        auto chrsLatestIdx{std::array<int, 3>{{-1, -1, -1}}};
-        for(auto i{0}; i < str_.size(); ++i) {
-            chrsLatestIdx[str_[i] - 'a'] = i;
-            validSubstrsCount += 1 + *std::min_element(chrsLatestIdx.cbegin(),
-                chrsLatestIdx.cend());
-        }
-        return validSubstrsCount;
-    }
+    [[nodiscard]]
+    static auto numberOfSubstrings(std::string_view const str_) -> int;
 };
+
+auto Solution::numberOfSubstrings(std::string_view const str_) -> int {
+    namespace vs = std::views;
+    namespace rs = std::ranges;
+
+    auto constexpr kTotChr{3};
+    auto constexpr kNoIdx{-1};
+    auto constexpr kCntOffset{1};
+    auto constexpr kChrSetFirst{'a'};
+
+    // Accumulator state for the folding iteration
+    struct IdxsAndTot {
+        std::array<int, kTotChr> mLatestIdxPerChr{kNoIdx, kNoIdx, kNoIdx};
+        int mSubstrTot_{};
+    };
+
+    auto const accumSubStrCnt{[=] (auto idxsAndTot_, auto const idx_) {
+        auto & [latestIdxPerChr, substrTot_]{idxsAndTot_};
+        latestIdxPerChr[str_[idx_] - kChrSetFirst] = idx_;
+        // Count valid substrings ending at the current index
+        substrTot_  += kCntOffset + rs::min(latestIdxPerChr);
+        
+        return idxsAndTot_;
+    }};
+
+    return rs::fold_left(
+        vs::iota(0, static_cast<int>(str_.size())),
+        IdxsAndTot{},
+        accumSubStrCnt
+    ).mSubstrTot_;
+}
+
+namespace {
+
+// Initializer to configure fast I/O before main() runs
+auto const fastIOInit{
+    [] {
+        std::ios_base::sync_with_stdio(false);
+        std::cin.tie(nullptr);
+        return 0;
+    } ()
+};
+
+} // namespace
