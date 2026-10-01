@@ -1,5 +1,5 @@
 // problem : https://leetcode.com/problems/valid-parentheses/description
-// submission : https://leetcode.com/problems/valid-parentheses/submissions/2159404321
+// submission : https://leetcode.com/problems/valid-parentheses/submissions/2159424894
 // solution post : https://leetcode.com/problems/valid-parentheses/solutions/8550721/simplanation-simple-explanation-by-cyber-mcl7
 
 // Approach : LIFO Scope Resolution
@@ -23,20 +23,20 @@
 namespace {
 
 // Map bracket identities and maximum pair composition block size.
-constexpr auto kOpenBracketsType1   {'('};
-constexpr auto kCloseBracketsType1  {')'};
-constexpr auto kOpenBracketsType2   {'{'};
-constexpr auto kCloseBracketsType2  {'}'};
-constexpr auto kOpenBracketsType3   {'['};
-constexpr auto kCloseBracketsType3  {']'};
-constexpr auto kBracketPairSize     {2uz};
+constexpr auto kOpenBracketType1   {'('};
+constexpr auto kCloseBracketType1  {')'};
+constexpr auto kOpenBracketType2   {'{'};
+constexpr auto kCloseBracketType2  {'}'};
+constexpr auto kOpenBracketType3   {'['};
+constexpr auto kCloseBracketType3  {']'};
+constexpr auto kBracketPairSize    {2uz};
 
 // Evaluate if character represents the start of a nested block.
 constexpr auto isOpenBracket([] (auto const bracket_) {
     return 
-        bracket_ == kOpenBracketsType1 ||
-        bracket_ == kOpenBracketsType2 ||
-        bracket_ == kOpenBracketsType3;
+        bracket_ == kOpenBracketType1 ||
+        bracket_ == kOpenBracketType2 ||
+        bracket_ == kOpenBracketType3;
 });
 
 // Verify structural type consistency between two bracket boundaries.
@@ -45,9 +45,9 @@ constexpr auto isDifferentTypeBrackets([] (
     auto const bracket2_
 ) {
     return !(
-        (bracket1_ == kOpenBracketsType1 && bracket2_ == kCloseBracketsType1) ||
-        (bracket1_ == kOpenBracketsType2 && bracket2_ == kCloseBracketsType2) ||
-        (bracket1_ == kOpenBracketsType3 && bracket2_ == kCloseBracketsType3)
+        (bracket1_ == kOpenBracketType1 && bracket2_ == kCloseBracketType1) ||
+        (bracket1_ == kOpenBracketType2 && bracket2_ == kCloseBracketType2) ||
+        (bracket1_ == kOpenBracketType3 && bracket2_ == kCloseBracketType3)
     );
 });
 
